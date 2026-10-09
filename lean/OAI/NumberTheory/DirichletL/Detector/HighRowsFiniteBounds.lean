@@ -1,3 +1,4 @@
+import OAI.NumberTheory.DirichletL.Detector.EulerCoordinates
 import OAI.NumberTheory.DirichletL.Detector.HighRowsTermBounds
 import OAI.NumberTheory.DirichletL.Detector.EulerRegion
 

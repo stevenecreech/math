@@ -1,0 +1,16 @@
+QRH variable low-exponent and normalization verification
+2026-10-08T18:37:44.452418+00:00
+Lean toolchain: leanprover/lean4:v4.34.1
+Mathlib/dependency cache: /Users/stevencreech/code/Zaremba/.lake/packages
+Strict command: python3 /tmp/check-qrh-lean-strict-low.py OAI.NumberTheory.DirichletL.Inversion.TerminalExponent OAI.NumberTheory.DirichletL.Detector.LowReflectedExponent OAI.NumberTheory.DirichletL.Detector.LowReflectedLength QRHParameterAudit.LowReflectedExtension QRHParameterAudit.LowNormExtension
+Compiler per module: elan run leanprover/lean4:v4.34.1 lean -DautoImplicit=false -o OUTPUT SOURCE
+Exit status: 0. No compiler warnings or errors.
+Compiled output: lean/.lake/build/lib/lean; copied unchanged to lean/.lake/parameter-audit/lib/lean.
+Axioms: to be checked by the integrated QRHParameterAudit.TrustReport.
+The full original Inversion.TerminalWidths module was not rebuilt. Its two scalar definitions were moved verbatim, with names preserved.
+
+PASS OAI.NumberTheory.DirichletL.Inversion.TerminalExponent source_sha256=24dd2154a06850ce0dfa5301ae36a68fefe4a6e69411d79ced425e47c742c629 olean_sha256=468c06081f8a17bff3d328c2b2bcf564c39b4a71e42f62252c7614b696d8f994
+PASS OAI.NumberTheory.DirichletL.Detector.LowReflectedExponent source_sha256=bf556826c3e73157b7a413fa1e6656f4d5cb61cc23783c1dcf0a7a27bae3bdac olean_sha256=e8831dc14a6b4b4368801dde3d72d1736fb87b8701c7bd9cfcf3f6f58fd06b93
+PASS OAI.NumberTheory.DirichletL.Detector.LowReflectedLength source_sha256=4b78ca2d011881e543b7f2d9feb1e4de13b9cc61aba98524561a84dcc549908c olean_sha256=610fa356308e5e13d53c4a90f44b38377022a8c9e1242132ad3e1f3ad4606e7e
+PASS QRHParameterAudit.LowReflectedExtension source_sha256=0e5109a08b46cde39bf21567c0a98b53d7788925aa902c788ee5119867c8d159 olean_sha256=cd7442d99603e6e1bb1562958a6a984b578ff0e3a7517c5bb60c2474a1717c08
+PASS QRHParameterAudit.LowNormExtension source_sha256=fd89c9e46fbb7a70e83db61fe4d04fa7ecd9c7ce649f6106ec3c183e70f8e827 olean_sha256=d7d44e7f2575ca38136663254984aa05978a94e9193e93788d8387d082374752

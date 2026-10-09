@@ -1,0 +1,299 @@
+import QRHParameterAudit
+import OAI.NumberTheory.DirichletL.Improved.FloorScales
+
+#print OAI.QRHParameterAudit.ArithmeticParameterCertificate
+#print OAI.QRHParameterAudit.arithmetic_parameter_certificate
+#check OAI.QRHParameterAudit.exact_improvement
+#print axioms OAI.QRHParameterAudit.exact_improvement
+#check OAI.QRHParameterAudit.slot_sum
+#print axioms OAI.QRHParameterAudit.slot_sum
+#check OAI.QRHParameterAudit.slot_difference
+#print axioms OAI.QRHParameterAudit.slot_difference
+#check OAI.QRHParameterAudit.height_geometry
+#print axioms OAI.QRHParameterAudit.height_geometry
+#check OAI.QRHParameterAudit.boundary_geometry
+#print axioms OAI.QRHParameterAudit.boundary_geometry
+#check OAI.QRHParameterAudit.signal_eq
+#print axioms OAI.QRHParameterAudit.signal_eq
+#check OAI.QRHParameterAudit.low_signal
+#print axioms OAI.QRHParameterAudit.low_signal
+#check OAI.QRHParameterAudit.signal_at_boundary
+#print axioms OAI.QRHParameterAudit.signal_at_boundary
+#check OAI.QRHParameterAudit.geometry_margins
+#print axioms OAI.QRHParameterAudit.geometry_margins
+#check OAI.QRHParameterAudit.parameter_bounds
+#print axioms OAI.QRHParameterAudit.parameter_bounds
+#check OAI.QRHParameterAudit.inverse_supply
+#print axioms OAI.QRHParameterAudit.inverse_supply
+#check OAI.QRHParameterAudit.extension_supply
+#print axioms OAI.QRHParameterAudit.extension_supply
+#check OAI.QRHParameterAudit.gamma_lower
+#print axioms OAI.QRHParameterAudit.gamma_lower
+#check OAI.QRHParameterAudit.positive_part_le
+#print axioms OAI.QRHParameterAudit.positive_part_le
+#check OAI.QRHParameterAudit.low_extra_bound
+#print axioms OAI.QRHParameterAudit.low_extra_bound
+#check OAI.QRHParameterAudit.low_extra_nonpos
+#print axioms OAI.QRHParameterAudit.low_extra_nonpos
+#check OAI.QRHParameterAudit.row_difference
+#print axioms OAI.QRHParameterAudit.row_difference
+#check OAI.QRHParameterAudit.row_base_bounds
+#print axioms OAI.QRHParameterAudit.row_base_bounds
+#check OAI.QRHParameterAudit.rowJ_bounds
+#print axioms OAI.QRHParameterAudit.rowJ_bounds
+#check OAI.QRHParameterAudit.rowJ_pos
+#print axioms OAI.QRHParameterAudit.rowJ_pos
+#check OAI.QRHParameterAudit.rowD_pos
+#print axioms OAI.QRHParameterAudit.rowD_pos
+#check OAI.QRHParameterAudit.witness_bounds
+#print axioms OAI.QRHParameterAudit.witness_bounds
+#check OAI.QRHParameterAudit.rowR_long
+#print axioms OAI.QRHParameterAudit.rowR_long
+#check OAI.QRHParameterAudit.row_balancing
+#print axioms OAI.QRHParameterAudit.row_balancing
+#check OAI.QRHParameterAudit.rowR_bounds
+#print axioms OAI.QRHParameterAudit.rowR_bounds
+#check OAI.QRHParameterAudit.endpoint_identity
+#print axioms OAI.QRHParameterAudit.endpoint_identity
+#check OAI.QRHParameterAudit.discriminant_identity
+#print axioms OAI.QRHParameterAudit.discriminant_identity
+#check OAI.QRHParameterAudit.square_identity
+#print axioms OAI.QRHParameterAudit.square_identity
+#check OAI.QRHParameterAudit.polyA_pos
+#print axioms OAI.QRHParameterAudit.polyA_pos
+#check OAI.QRHParameterAudit.polyA_upper
+#print axioms OAI.QRHParameterAudit.polyA_upper
+#check OAI.QRHParameterAudit.discriminant_lower
+#print axioms OAI.QRHParameterAudit.discriminant_lower
+#check OAI.QRHParameterAudit.endpoint_positive
+#print axioms OAI.QRHParameterAudit.endpoint_positive
+#check OAI.QRHParameterAudit.endpoint_lower
+#print axioms OAI.QRHParameterAudit.endpoint_lower
+#check OAI.QRHParameterAudit.high_margin
+#print axioms OAI.QRHParameterAudit.high_margin
+#check OAI.QRHParameterAudit.highE_eq_generalE
+#print axioms OAI.QRHParameterAudit.highE_eq_generalE
+#check OAI.QRHParameterAudit.floor_endpoint
+#print axioms OAI.QRHParameterAudit.floor_endpoint
+#check OAI.QRHParameterAudit.floor_margin
+#print axioms OAI.QRHParameterAudit.floor_margin
+#check OAI.QRHParameterAudit.unselected_endpoint
+#print axioms OAI.QRHParameterAudit.unselected_endpoint
+#check OAI.QRHParameterAudit.unselected_margin
+#print axioms OAI.QRHParameterAudit.unselected_margin
+#check OAI.QRHParameterAudit.tiny_margin
+#print axioms OAI.QRHParameterAudit.tiny_margin
+#check OAI.QRHParameterAudit.extension_bounds
+#print axioms OAI.QRHParameterAudit.extension_bounds
+#check OAI.QRHParameterAudit.selected_slope
+#print axioms OAI.QRHParameterAudit.selected_slope
+#check OAI.QRHParameterAudit.generalE_extension
+#print axioms OAI.QRHParameterAudit.generalE_extension
+#check OAI.QRHParameterAudit.extended_high_margin
+#print axioms OAI.QRHParameterAudit.extended_high_margin
+#check OAI.QRHParameterAudit.euler_exponents
+#print axioms OAI.QRHParameterAudit.euler_exponents
+#check OAI.QRHParameterAudit.exists_late_height
+#print axioms OAI.QRHParameterAudit.exists_late_height
+#check OAI.QRHParameterAudit.exists_late_tail
+#print axioms OAI.QRHParameterAudit.exists_late_tail
+#check OAI.QRHParameterAudit.exists_common_losses
+#print axioms OAI.QRHParameterAudit.exists_common_losses
+#check OAI.QRHParameterAudit.exists_above_level
+#print axioms OAI.QRHParameterAudit.exists_above_level
+#check OAI.QRHParameterAudit.exists_above_sentinel
+#print axioms OAI.QRHParameterAudit.exists_above_sentinel
+#check OAI.QRHParameterAudit.arithmetic_parameter_certificate
+#print axioms OAI.QRHParameterAudit.arithmetic_parameter_certificate
+#check OAI.QRHParameterAudit.polynomial_height_bound
+#print axioms OAI.QRHParameterAudit.polynomial_height_bound
+#check OAI.QRHParameterAudit.absorb_height_and_tail
+#print axioms OAI.QRHParameterAudit.absorb_height_and_tail
+#check OAI.QRHParameterAudit.absorbed_error_isBigO
+#print axioms OAI.QRHParameterAudit.absorbed_error_isBigO
+#check OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin_pos
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin_pos
+#check OAI.QRHParameterAudit.AnalyticContinuation.continuation_boundary_gt
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.continuation_boundary_gt
+#check OAI.QRHParameterAudit.AnalyticContinuation.max_signal_exponents
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.max_signal_exponents
+#check OAI.QRHParameterAudit.AnalyticContinuation.rpow_isBigO_atTop_of_le
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.rpow_isBigO_atTop_of_le
+#check OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound
+#check OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound_with_margin
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound_with_margin
+#check OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_convergent
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_convergent
+#check OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_analytic
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_analytic
+#check OAI.QRHParameterAudit.AnalyticContinuation.product_identity_on_halfPlane
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.product_identity_on_halfPlane
+#check OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_regularized_signal
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_regularized_signal
+#check OAI.QRHParameterAudit.AnalyticContinuation.multiplier_ne_zero
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.multiplier_ne_zero
+#check OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_analytic
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_analytic
+#check OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_ne_zero
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_ne_zero
+#check OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_common_signal
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_common_signal
+#check OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_height_controlled_signal
+#print axioms OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_height_controlled_signal
+#check OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_second_region_bound
+#print axioms OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_second_region_bound
+#check OAI.QRHParameterAudit.EulerExtension.extended_denominators
+#print axioms OAI.QRHParameterAudit.EulerExtension.extended_denominators
+#check OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_analytic_x
+#print axioms OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_analytic_x
+#check OAI.QRHParameterAudit.EulerExtension.principal_local_analytic
+#print axioms OAI.QRHParameterAudit.EulerExtension.principal_local_analytic
+#check OAI.QRHParameterAudit.EulerExtension.extendedDefect_nonneg
+#print axioms OAI.QRHParameterAudit.EulerExtension.extendedDefect_nonneg
+#check OAI.QRHParameterAudit.EulerExtension.extendedCorrection_analytic_and_close
+#print axioms OAI.QRHParameterAudit.EulerExtension.extendedCorrection_analytic_and_close
+#check OAI.QRHParameterAudit.EulerExtension.exists_uniform_extended_cutoff
+#print axioms OAI.QRHParameterAudit.EulerExtension.exists_uniform_extended_cutoff
+#check OAI.QRHParameterAudit.EulerExtension.region_correction_defect
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_correction_defect
+#check OAI.QRHParameterAudit.EulerExtension.region_correction_lower_bound
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_correction_lower_bound
+#check OAI.QRHParameterAudit.EulerExtension.region_correction_ne_zero
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_correction_ne_zero
+#check OAI.QRHParameterAudit.EulerExtension.region_correction_inverse_bound
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_correction_inverse_bound
+#check OAI.QRHParameterAudit.EulerExtension.region_geometric_bounds
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_geometric_bounds
+#check OAI.QRHParameterAudit.EulerExtension.region_marked_error_bounds
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_marked_error_bounds
+#check OAI.QRHParameterAudit.EulerExtension.region_replacement_error
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_replacement_error
+#check OAI.QRHParameterAudit.EulerExtension.region_slot_error
+#print axioms OAI.QRHParameterAudit.EulerExtension.region_slot_error
+#check OAI.QRHParameterAudit.EulerExtension.principal_slot_error_extended
+#print axioms OAI.QRHParameterAudit.EulerExtension.principal_slot_error_extended
+
+#check OAI.QRHParameterAudit.ideal_norm_rpow_summable
+#print axioms OAI.QRHParameterAudit.ideal_norm_rpow_summable
+
+#check OAI.QRHParameterAudit.EulerExtension.idealDefect_summable
+#print axioms OAI.QRHParameterAudit.EulerExtension.idealDefect_summable
+
+#check OAI.QRHParameterAudit.EulerExtension.idealDefect_nonneg
+#print axioms OAI.QRHParameterAudit.EulerExtension.idealDefect_nonneg
+
+#check OAI.QRHParameterAudit.EulerExtension.exists_uniform_ideal_cutoff
+#print axioms OAI.QRHParameterAudit.EulerExtension.exists_uniform_ideal_cutoff
+
+#check OAI.QRHParameterAudit.EulerExtension.mem_idealSmallPrimeSet
+#print axioms OAI.QRHParameterAudit.EulerExtension.mem_idealSmallPrimeSet
+
+#check OAI.QRHParameterAudit.EulerExtension.exists_ideal_correction
+#print axioms OAI.QRHParameterAudit.EulerExtension.exists_ideal_correction
+
+#check OAI.QRHParameterAudit.EulerExtension.weighted_region_slot_error
+#print axioms OAI.QRHParameterAudit.EulerExtension.weighted_region_slot_error
+
+#check OAI.QRHParameterAudit.EulerExtension.weighted_region_product_error_linear
+#print axioms OAI.QRHParameterAudit.EulerExtension.weighted_region_product_error_linear
+
+#check OAI.QRHParameterAudit.EulerExtension.weighted_principal_product_error_extended
+#print axioms OAI.QRHParameterAudit.EulerExtension.weighted_principal_product_error_extended
+
+#check OAI.QRHParameterAudit.compensated_reflected_exponent_variable
+#print axioms OAI.QRHParameterAudit.compensated_reflected_exponent_variable
+
+#check OAI.QRHParameterAudit.compensated_reflected_cost
+#print axioms OAI.QRHParameterAudit.compensated_reflected_cost
+
+#check OAI.QRHParameterAudit.candidate_compensated_reflected_cost
+#print axioms OAI.QRHParameterAudit.candidate_compensated_reflected_cost
+
+#check OAI.QRHParameterAudit.low_inverse_power_cancel_variable
+#print axioms OAI.QRHParameterAudit.low_inverse_power_cancel_variable
+
+#check OAI.QRHParameterAudit.low_inverse_sqrt_normalized_variable
+#print axioms OAI.QRHParameterAudit.low_inverse_sqrt_normalized_variable
+
+#check OAI.QRHParameterAudit.low_compensated_sqrt_bound
+#print axioms OAI.QRHParameterAudit.low_compensated_sqrt_bound
+
+#check OAI.QRHParameterAudit.low_gram_sqrt_power_variable
+#print axioms OAI.QRHParameterAudit.low_gram_sqrt_power_variable
+
+#check OAI.QRHParameterAudit.low_gram_sqrt_power_candidate
+#print axioms OAI.QRHParameterAudit.low_gram_sqrt_power_candidate
+
+#check OAI.QRHParameterAudit.rowD_eq_existing
+#print axioms OAI.QRHParameterAudit.rowD_eq_existing
+
+#check OAI.QRHParameterAudit.rowP_eq_existing
+#print axioms OAI.QRHParameterAudit.rowP_eq_existing
+
+#check OAI.QRHParameterAudit.rowJ_eq_existing
+#print axioms OAI.QRHParameterAudit.rowJ_eq_existing
+
+#check OAI.QRHParameterAudit.witnessT_eq_existing
+#print axioms OAI.QRHParameterAudit.witnessT_eq_existing
+
+#check OAI.QRHParameterAudit.rowR_eq_existing
+#print axioms OAI.QRHParameterAudit.rowR_eq_existing
+
+#check OAI.QRHParameterAudit.fixed_capacity_of_baseline
+#print axioms OAI.QRHParameterAudit.fixed_capacity_of_baseline
+
+#check OAI.QRHParameterAudit.fixed_capacity_identity
+#print axioms OAI.QRHParameterAudit.fixed_capacity_identity
+
+#check OAI.QRHParameterAudit.selected_row_margin
+#print axioms OAI.QRHParameterAudit.selected_row_margin
+
+#check OAI.QRHParameterAudit.selected_row_sum_bound
+#print axioms OAI.QRHParameterAudit.selected_row_sum_bound
+
+#check OAI.QRHParameterAudit.selected_bins_sum_bound
+#print axioms OAI.QRHParameterAudit.selected_bins_sum_bound
+
+#check OAI.QRHParameterAudit.baselineBoundary_improves
+#print axioms OAI.QRHParameterAudit.baselineBoundary_improves
+
+#check OAI.QRHParameterAudit.baselineBoundary_eq
+#print axioms OAI.QRHParameterAudit.baselineBoundary_eq
+
+#check OAI.QRHParameterAudit.firstBoundary_improves
+#print axioms OAI.QRHParameterAudit.firstBoundary_improves
+
+#check OAI.QRHParameterAudit.baseline_margin_eq
+#print axioms OAI.QRHParameterAudit.baseline_margin_eq
+
+#check OAI.QRHParameterAudit.baseline_continuation_below_firstBoundary
+#print axioms OAI.QRHParameterAudit.baseline_continuation_below_firstBoundary
+
+#check OAI.QRHParameterAudit.nonzero_of_fixed_baseline_bounds
+#print axioms OAI.QRHParameterAudit.nonzero_of_fixed_baseline_bounds
+
+#check OAI.QRHParameterAudit.nonzero_of_fixed_baseline_error
+#print axioms OAI.QRHParameterAudit.nonzero_of_fixed_baseline_error
+
+#check OAI.QRHParameterAudit.exists_distinct_slots
+#print axioms OAI.QRHParameterAudit.exists_distinct_slots
+
+#check OAI.QRHParameterAudit.exists_physical_slots
+#print axioms OAI.QRHParameterAudit.exists_physical_slots
+
+#check OAI.QRHParameterAudit.exists_audit_slots
+#print axioms OAI.QRHParameterAudit.exists_audit_slots
+
+#check OAI.QRHParameterAudit.central_physical_scale_identity
+#print axioms OAI.QRHParameterAudit.central_physical_scale_identity
+#check OAI.QRHParameterAudit.central_class_exponent_identity
+#print axioms OAI.QRHParameterAudit.central_class_exponent_identity
+#check OAI.QRHParameterAudit.central_class_saving
+#print axioms OAI.QRHParameterAudit.central_class_saving
+#check OAI.SevenEighths.ProbeHighRowFamily.audited_floor_source_margin
+#print axioms OAI.SevenEighths.ProbeHighRowFamily.audited_floor_source_margin
+#check OAI.SevenEighths.ProbeHighRowFamily.audited_floor_loss_bound
+#print axioms OAI.SevenEighths.ProbeHighRowFamily.audited_floor_loss_bound
+#check OAI.SevenEighths.ProbeHighRowFamily.audited_floor_exponent_identity
+#print axioms OAI.SevenEighths.ProbeHighRowFamily.audited_floor_exponent_identity

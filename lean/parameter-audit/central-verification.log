@@ -1,0 +1,1015 @@
+Lean toolchain: leanprover/lean4:v4.34.1
+mathlib commit: d13f23b723b8a846827a245b89c10fc7d3f11612
+Source manuscript SHA-256: 8fe93046f8cf5ef1ba5969c89addc02d76311adc4ee907509ff9cd96f7ec99e7
+Parameter audit SHA-256: 64c14056fbd322e226731b68e160f8f6cd874cfa9a440e6687781132103db12d
+All 9 cached package revisions match the lockfile.
+Scope: unconditional parameter arithmetic and partial analytic generalizations (continuation, height absorption, Euler products and slots).
+No improved L-function nonvanishing theorem is asserted by this check.
+Compilation selection (4 modules): QRHParameterAudit.CentralExponent, OAI.NumberTheory.DirichletL.Improved.FloorScales, QRHParameterAudit, QRHParameterAudit.TrustReport
+CHECK QRHParameterAudit.CentralExponent
+PASS QRHParameterAudit.CentralExponent (44.8s)
+CHECK OAI.NumberTheory.DirichletL.Improved.FloorScales
+PASS OAI.NumberTheory.DirichletL.Improved.FloorScales (37.1s)
+CHECK QRHParameterAudit
+PASS QRHParameterAudit (79.4s)
+CHECK QRHParameterAudit.TrustReport
+structure OAI.QRHParameterAudit.ArithmeticParameterCertificate : Prop
+number of parameters: 0
+fields:
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.improvement : 7 / 8 - OAI.QRHParameterAudit.sigma0 = 21 / 500000
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.geometry : OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ly +
+          OAI.QRHParameterAudit.ell =
+        1 ∧
+      OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.lx = OAI.QRHParameterAudit.b ∧
+        OAI.QRHParameterAudit.geomH = 1 - OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ell
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.margins : OAI.QRHParameterAudit.lx - OAI.QRHParameterAudit.ell =
+        11703 / 62500 ∧
+      OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell = 39031 / 125000 ∧
+        OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell - 11 * OAI.QRHParameterAudit.b / 6 = 62311 / 750000
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.gamma_lower : 735 / 10 ^ 9 < OAI.QRHParameterAudit.gammaSave
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.base_rows : ∀ (x : ℝ),
+      0 ≤ x →
+        x ≤ 1 / 2 →
+          37 / 18 ≤ OAI.QRHParameterAudit.rowD x ∧
+            OAI.QRHParameterAudit.rowD x ≤ 3 ∧
+              7 / 9 ≤ OAI.QRHParameterAudit.rowP x ∧
+                OAI.QRHParameterAudit.rowP x ≤ 2 ∧ 0 ≤ OAI.QRHParameterAudit.rowD x - OAI.QRHParameterAudit.rowP x
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.boundary : OAI.QRHParameterAudit.sigma0 =
+      11 / 12 - OAI.QRHParameterAudit.ell / 4
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.bounds : 1 / 2 < OAI.QRHParameterAudit.sigma0 ∧
+      OAI.QRHParameterAudit.sigma0 < 7 / 8 ∧
+        0 < OAI.QRHParameterAudit.ell ∧
+          OAI.QRHParameterAudit.ell < 1 / 5 ∧
+            0 < OAI.QRHParameterAudit.lx ∧
+              0 < OAI.QRHParameterAudit.ly ∧ 0 < OAI.QRHParameterAudit.geomH ∧ 0 < OAI.QRHParameterAudit.gammaSave
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.signal_identity : ∀ (s : ℝ),
+      OAI.QRHParameterAudit.signal s = s - 11 / 16
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.low_signal_identity : OAI.QRHParameterAudit.lx / 2 +
+        OAI.QRHParameterAudit.b / 12 =
+      OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.low : ∀ (u : ℝ),
+      0 ≤ u →
+        max 0 (5 * OAI.QRHParameterAudit.ell - 1 + u) ≤ u ∧
+          OAI.QRHParameterAudit.lowExtra u ≤ -(7 / 8) * u ∧ OAI.QRHParameterAudit.lowExtra u ≤ 0
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.row_bounds : ∀ (d x : ℝ),
+      0 ≤ d →
+        d ≤ 3 / 4 →
+          0 ≤ x →
+            x ≤ 1 / 2 →
+              35 / 54 ≤ OAI.QRHParameterAudit.rowJ d x ∧
+                OAI.QRHParameterAudit.rowJ d x ≤ 5 / 2 ∧
+                  1 ≤ OAI.QRHParameterAudit.witnessT d x ∧
+                    OAI.QRHParameterAudit.witnessT d x ≤ 3 / 2 ∧
+                      1 - d ≤ OAI.QRHParameterAudit.rowR d x ∧ OAI.QRHParameterAudit.rowR d x ≤ 1 - d + (5 / 6 - d) / 2
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.balancing : ∀ (d x : ℝ),
+      0 ≤ d →
+        d ≤ 3 / 4 →
+          0 ≤ x →
+            x ≤ 1 / 2 →
+              1 - d +
+                  d * OAI.QRHParameterAudit.rowP x / OAI.QRHParameterAudit.rowD x *
+                    (3 / 2 - OAI.QRHParameterAudit.witnessT d x) =
+                OAI.QRHParameterAudit.rowR d x
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.high : ∀ (d x : ℝ),
+      0 ≤ d → d ≤ 3 / 4 → 0 ≤ x → x ≤ 1 / 2 → OAI.QRHParameterAudit.highE d x ≤ -OAI.QRHParameterAudit.gammaSave
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.floor : ∀ (r q : ℝ),
+      r ≤ OAI.QRHParameterAudit.geomH → q ≤ 1 / 100 → OAI.QRHParameterAudit.generalE r (1 / 50) q 1 ≤ -105343 / 18750000
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.unselected : ∀ (r d q : ℝ),
+      0 ≤ d →
+        d ≤ 3 / 4 →
+          q ≤ d / 2 → r ≤ 1 / 2 → OAI.QRHParameterAudit.generalE r d q (76 / 75 - 2 * d / 3) ≤ -1872449 / 75000000
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.tiny : OAI.QRHParameterAudit.geomH * (17 / 50 - 1 / 6) -
+          OAI.QRHParameterAudit.ly / 2 +
+        2 / 100 =
+      -122913 / 1562500
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.supply : OAI.QRHParameterAudit.ell /
+            OAI.QRHParameterAudit.geomH -
+          7 / 37 =
+        181357 / 11276934 ∧
+      5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH = 8033 / 375000
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.extension_supply : 0 < OAI.QRHParameterAudit.extension ∧
+      OAI.QRHParameterAudit.extension < OAI.QRHParameterAudit.gammaSave / 8 ∧
+        OAI.QRHParameterAudit.extension < 5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH ∧
+          1 / 5 < OAI.QRHParameterAudit.ell / (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) ∧
+            7 / 37 < 1 / 5
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.extended_high : ∀ (d x : ℝ),
+      0 ≤ d →
+        d ≤ 3 / 4 →
+          0 ≤ x →
+            x ≤ 1 / 2 →
+              OAI.QRHParameterAudit.generalE (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) d (x * d)
+                  (OAI.QRHParameterAudit.rowR d x) ≤
+                -(7 / 8) * OAI.QRHParameterAudit.gammaSave
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.euler : ∀ (s : ℝ),
+      3 / 4 ≤ s →
+        149 / 100 ≤ OAI.QRHParameterAudit.eulerC s ∧ 1 < 149 / 100 ∧ 37 / 50 ≤ OAI.QRHParameterAudit.slotDecay s
+constructor:
+  OAI.QRHParameterAudit.ArithmeticParameterCertificate.mk
+    (improvement : 7 / 8 - OAI.QRHParameterAudit.sigma0 = 21 / 500000)
+    (geometry :
+      OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ly + OAI.QRHParameterAudit.ell = 1 ∧
+        OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.lx = OAI.QRHParameterAudit.b ∧
+          OAI.QRHParameterAudit.geomH = 1 - OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ell)
+    (margins :
+      OAI.QRHParameterAudit.lx - OAI.QRHParameterAudit.ell = 11703 / 62500 ∧
+        OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell = 39031 / 125000 ∧
+          OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell - 11 * OAI.QRHParameterAudit.b / 6 = 62311 / 750000)
+    (gamma_lower : 735 / 10 ^ 9 < OAI.QRHParameterAudit.gammaSave)
+    (base_rows :
+      ∀ (x : ℝ),
+        0 ≤ x →
+          x ≤ 1 / 2 →
+            37 / 18 ≤ OAI.QRHParameterAudit.rowD x ∧
+              OAI.QRHParameterAudit.rowD x ≤ 3 ∧
+                7 / 9 ≤ OAI.QRHParameterAudit.rowP x ∧
+                  OAI.QRHParameterAudit.rowP x ≤ 2 ∧ 0 ≤ OAI.QRHParameterAudit.rowD x - OAI.QRHParameterAudit.rowP x)
+    (boundary : OAI.QRHParameterAudit.sigma0 = 11 / 12 - OAI.QRHParameterAudit.ell / 4)
+    (bounds :
+      1 / 2 < OAI.QRHParameterAudit.sigma0 ∧
+        OAI.QRHParameterAudit.sigma0 < 7 / 8 ∧
+          0 < OAI.QRHParameterAudit.ell ∧
+            OAI.QRHParameterAudit.ell < 1 / 5 ∧
+              0 < OAI.QRHParameterAudit.lx ∧
+                0 < OAI.QRHParameterAudit.ly ∧ 0 < OAI.QRHParameterAudit.geomH ∧ 0 < OAI.QRHParameterAudit.gammaSave)
+    (signal_identity : ∀ (s : ℝ), OAI.QRHParameterAudit.signal s = s - 11 / 16)
+    (low_signal_identity :
+      OAI.QRHParameterAudit.lx / 2 + OAI.QRHParameterAudit.b / 12 =
+        OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0)
+    (low :
+      ∀ (u : ℝ),
+        0 ≤ u →
+          max 0 (5 * OAI.QRHParameterAudit.ell - 1 + u) ≤ u ∧
+            OAI.QRHParameterAudit.lowExtra u ≤ -(7 / 8) * u ∧ OAI.QRHParameterAudit.lowExtra u ≤ 0)
+    (row_bounds :
+      ∀ (d x : ℝ),
+        0 ≤ d →
+          d ≤ 3 / 4 →
+            0 ≤ x →
+              x ≤ 1 / 2 →
+                35 / 54 ≤ OAI.QRHParameterAudit.rowJ d x ∧
+                  OAI.QRHParameterAudit.rowJ d x ≤ 5 / 2 ∧
+                    1 ≤ OAI.QRHParameterAudit.witnessT d x ∧
+                      OAI.QRHParameterAudit.witnessT d x ≤ 3 / 2 ∧
+                        1 - d ≤ OAI.QRHParameterAudit.rowR d x ∧
+                          OAI.QRHParameterAudit.rowR d x ≤ 1 - d + (5 / 6 - d) / 2)
+    (balancing :
+      ∀ (d x : ℝ),
+        0 ≤ d →
+          d ≤ 3 / 4 →
+            0 ≤ x →
+              x ≤ 1 / 2 →
+                1 - d +
+                    d * OAI.QRHParameterAudit.rowP x / OAI.QRHParameterAudit.rowD x *
+                      (3 / 2 - OAI.QRHParameterAudit.witnessT d x) =
+                  OAI.QRHParameterAudit.rowR d x)
+    (high :
+      ∀ (d x : ℝ),
+        0 ≤ d → d ≤ 3 / 4 → 0 ≤ x → x ≤ 1 / 2 → OAI.QRHParameterAudit.highE d x ≤ -OAI.QRHParameterAudit.gammaSave)
+    (floor :
+      ∀ (r q : ℝ),
+        r ≤ OAI.QRHParameterAudit.geomH →
+          q ≤ 1 / 100 → OAI.QRHParameterAudit.generalE r (1 / 50) q 1 ≤ -105343 / 18750000)
+    (unselected :
+      ∀ (r d q : ℝ),
+        0 ≤ d →
+          d ≤ 3 / 4 →
+            q ≤ d / 2 → r ≤ 1 / 2 → OAI.QRHParameterAudit.generalE r d q (76 / 75 - 2 * d / 3) ≤ -1872449 / 75000000)
+    (tiny :
+      OAI.QRHParameterAudit.geomH * (17 / 50 - 1 / 6) - OAI.QRHParameterAudit.ly / 2 + 2 / 100 = -122913 / 1562500)
+    (supply :
+      OAI.QRHParameterAudit.ell / OAI.QRHParameterAudit.geomH - 7 / 37 = 181357 / 11276934 ∧
+        5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH = 8033 / 375000)
+    (extension_supply :
+      0 < OAI.QRHParameterAudit.extension ∧
+        OAI.QRHParameterAudit.extension < OAI.QRHParameterAudit.gammaSave / 8 ∧
+          OAI.QRHParameterAudit.extension < 5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH ∧
+            1 / 5 < OAI.QRHParameterAudit.ell / (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) ∧
+              7 / 37 < 1 / 5)
+    (extended_high :
+      ∀ (d x : ℝ),
+        0 ≤ d →
+          d ≤ 3 / 4 →
+            0 ≤ x →
+              x ≤ 1 / 2 →
+                OAI.QRHParameterAudit.generalE (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) d (x * d)
+                    (OAI.QRHParameterAudit.rowR d x) ≤
+                  -(7 / 8) * OAI.QRHParameterAudit.gammaSave)
+    (euler :
+      ∀ (s : ℝ),
+        3 / 4 ≤ s →
+          149 / 100 ≤ OAI.QRHParameterAudit.eulerC s ∧ 1 < 149 / 100 ∧ 37 / 50 ≤ OAI.QRHParameterAudit.slotDecay s) :
+    OAI.QRHParameterAudit.ArithmeticParameterCertificate
+theorem OAI.QRHParameterAudit.arithmetic_parameter_certificate : OAI.QRHParameterAudit.ArithmeticParameterCertificate :=
+{ improvement := OAI.QRHParameterAudit.exact_improvement,
+  geometry :=
+    ⟨OAI.QRHParameterAudit.slot_sum, ⟨OAI.QRHParameterAudit.slot_difference, OAI.QRHParameterAudit.height_geometry⟩⟩,
+  margins := OAI.QRHParameterAudit.geometry_margins, gamma_lower := OAI.QRHParameterAudit.gamma_lower,
+  base_rows := fun x => OAI.QRHParameterAudit.row_base_bounds, boundary := OAI.QRHParameterAudit.boundary_geometry,
+  bounds := OAI.QRHParameterAudit.parameter_bounds, signal_identity := OAI.QRHParameterAudit.signal_eq,
+  low_signal_identity := OAI.QRHParameterAudit.low_signal,
+  low := fun x hu =>
+    ⟨OAI.QRHParameterAudit.positive_part_le hu,
+      ⟨OAI.QRHParameterAudit.low_extra_bound hu, OAI.QRHParameterAudit.low_extra_nonpos hu⟩⟩,
+  row_bounds := fun d x hd0 hd1 hx0 hx1 =>
+    ⟨(OAI.QRHParameterAudit.rowJ_bounds hd0 hd1 hx0 hx1).left,
+      ⟨(OAI.QRHParameterAudit.rowJ_bounds hd0 hd1 hx0 hx1).right,
+        ⟨(OAI.QRHParameterAudit.witness_bounds hd0 hd1 hx0 hx1).left,
+          ⟨(OAI.QRHParameterAudit.witness_bounds hd0 hd1 hx0 hx1).right,
+            OAI.QRHParameterAudit.rowR_bounds hd0 hd1 hx0 hx1⟩⟩⟩⟩,
+  balancing := fun x x_1 hd0 hd1 hx0 hx1 =>
+    OAI.QRHParameterAudit.row_balancing (ne_of_gt (OAI.QRHParameterAudit.rowD_pos hx0 hx1))
+      (ne_of_gt (OAI.QRHParameterAudit.rowJ_pos hd0 hd1 hx0 hx1)),
+  high := fun x x_1 => OAI.QRHParameterAudit.high_margin, floor := fun x x_1 => OAI.QRHParameterAudit.floor_margin,
+  unselected := fun x x_1 x_2 => OAI.QRHParameterAudit.unselected_margin, tiny := OAI.QRHParameterAudit.tiny_margin,
+  supply := ⟨OAI.QRHParameterAudit.inverse_supply, OAI.QRHParameterAudit.extension_supply⟩,
+  extension_supply := OAI.QRHParameterAudit.extension_bounds,
+  extended_high := fun x x_1 => OAI.QRHParameterAudit.extended_high_margin,
+  euler := fun x => OAI.QRHParameterAudit.euler_exponents }
+OAI.QRHParameterAudit.exact_improvement : 7 / 8 - OAI.QRHParameterAudit.sigma0 = 21 / 500000
+'OAI.QRHParameterAudit.exact_improvement' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.slot_sum : OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ly + OAI.QRHParameterAudit.ell = 1
+'OAI.QRHParameterAudit.slot_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.slot_difference : OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.lx = OAI.QRHParameterAudit.b
+'OAI.QRHParameterAudit.slot_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.height_geometry :
+  OAI.QRHParameterAudit.geomH = 1 - OAI.QRHParameterAudit.lx + OAI.QRHParameterAudit.ell
+'OAI.QRHParameterAudit.height_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.boundary_geometry : OAI.QRHParameterAudit.sigma0 = 11 / 12 - OAI.QRHParameterAudit.ell / 4
+'OAI.QRHParameterAudit.boundary_geometry' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.signal_eq (s : ℝ) : OAI.QRHParameterAudit.signal s = s - 11 / 16
+'OAI.QRHParameterAudit.signal_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_signal :
+  OAI.QRHParameterAudit.lx / 2 + OAI.QRHParameterAudit.b / 12 =
+    OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0
+'OAI.QRHParameterAudit.low_signal' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.signal_at_boundary : OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 = 93729 / 500000
+'OAI.QRHParameterAudit.signal_at_boundary' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.geometry_margins :
+  OAI.QRHParameterAudit.lx - OAI.QRHParameterAudit.ell = 11703 / 62500 ∧
+    OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell = 39031 / 125000 ∧
+      OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.ell - 11 * OAI.QRHParameterAudit.b / 6 = 62311 / 750000
+'OAI.QRHParameterAudit.geometry_margins' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.parameter_bounds :
+  1 / 2 < OAI.QRHParameterAudit.sigma0 ∧
+    OAI.QRHParameterAudit.sigma0 < 7 / 8 ∧
+      0 < OAI.QRHParameterAudit.ell ∧
+        OAI.QRHParameterAudit.ell < 1 / 5 ∧
+          0 < OAI.QRHParameterAudit.lx ∧
+            0 < OAI.QRHParameterAudit.ly ∧ 0 < OAI.QRHParameterAudit.geomH ∧ 0 < OAI.QRHParameterAudit.gammaSave
+'OAI.QRHParameterAudit.parameter_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.inverse_supply :
+  OAI.QRHParameterAudit.ell / OAI.QRHParameterAudit.geomH - 7 / 37 = 181357 / 11276934
+'OAI.QRHParameterAudit.inverse_supply' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.extension_supply : 5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH = 8033 / 375000
+'OAI.QRHParameterAudit.extension_supply' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.gamma_lower : 735 / 10 ^ 9 < OAI.QRHParameterAudit.gammaSave
+'OAI.QRHParameterAudit.gamma_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.positive_part_le {u : ℝ} (hu : 0 ≤ u) : max 0 (5 * OAI.QRHParameterAudit.ell - 1 + u) ≤ u
+'OAI.QRHParameterAudit.positive_part_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_extra_bound {u : ℝ} (hu : 0 ≤ u) : OAI.QRHParameterAudit.lowExtra u ≤ -(7 / 8) * u
+'OAI.QRHParameterAudit.low_extra_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_extra_nonpos {u : ℝ} (hu : 0 ≤ u) : OAI.QRHParameterAudit.lowExtra u ≤ 0
+'OAI.QRHParameterAudit.low_extra_nonpos' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.row_difference (x : ℝ) :
+  OAI.QRHParameterAudit.rowD x - OAI.QRHParameterAudit.rowP x = 1 + x - 8 * x ^ 2 / 9
+'OAI.QRHParameterAudit.row_difference' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.row_base_bounds {x : ℝ} (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  37 / 18 ≤ OAI.QRHParameterAudit.rowD x ∧
+    OAI.QRHParameterAudit.rowD x ≤ 3 ∧
+      7 / 9 ≤ OAI.QRHParameterAudit.rowP x ∧
+        OAI.QRHParameterAudit.rowP x ≤ 2 ∧ 0 ≤ OAI.QRHParameterAudit.rowD x - OAI.QRHParameterAudit.rowP x
+'OAI.QRHParameterAudit.row_base_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowJ_bounds {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  35 / 54 ≤ OAI.QRHParameterAudit.rowJ d x ∧ OAI.QRHParameterAudit.rowJ d x ≤ 5 / 2
+'OAI.QRHParameterAudit.rowJ_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowJ_pos {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  0 < OAI.QRHParameterAudit.rowJ d x
+'OAI.QRHParameterAudit.rowJ_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowD_pos {x : ℝ} (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) : 0 < OAI.QRHParameterAudit.rowD x
+'OAI.QRHParameterAudit.rowD_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.witness_bounds {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  1 ≤ OAI.QRHParameterAudit.witnessT d x ∧ OAI.QRHParameterAudit.witnessT d x ≤ 3 / 2
+'OAI.QRHParameterAudit.witness_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowR_long (d x : ℝ) :
+  OAI.QRHParameterAudit.rowR d x = 1 - d + (5 / 6 - d) * (OAI.QRHParameterAudit.witnessT d x - 1)
+'OAI.QRHParameterAudit.rowR_long' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.row_balancing {d x : ℝ} (hD : OAI.QRHParameterAudit.rowD x ≠ 0)
+  (hJ : OAI.QRHParameterAudit.rowJ d x ≠ 0) :
+  1 - d +
+      d * OAI.QRHParameterAudit.rowP x / OAI.QRHParameterAudit.rowD x * (3 / 2 - OAI.QRHParameterAudit.witnessT d x) =
+    OAI.QRHParameterAudit.rowR d x
+'OAI.QRHParameterAudit.row_balancing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowR_bounds {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  1 - d ≤ OAI.QRHParameterAudit.rowR d x ∧ OAI.QRHParameterAudit.rowR d x ≤ 1 - d + (5 / 6 - d) / 2
+'OAI.QRHParameterAudit.rowR_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.endpoint_identity {d x : ℝ} (hJ : OAI.QRHParameterAudit.rowJ d x ≠ 0) :
+  81000000 * (-2 * OAI.QRHParameterAudit.rowJ d x * OAI.QRHParameterAudit.highE d x) =
+    OAI.QRHParameterAudit.endpointPoly d (1 / 2 - x)
+'OAI.QRHParameterAudit.endpoint_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.discriminant_identity (y : ℝ) :
+  OAI.QRHParameterAudit.discPoly y =
+    128787346800 + 265436861138400 * y + 1268808584874800 * y ^ 2 + 1726935951112000 * y ^ 3 + 494789211723200 * y ^ 4
+'OAI.QRHParameterAudit.discriminant_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.square_identity (d y : ℝ) :
+  4 * OAI.QRHParameterAudit.polyA y * OAI.QRHParameterAudit.endpointPoly d y =
+    (2 * OAI.QRHParameterAudit.polyA y * d + OAI.QRHParameterAudit.polyB y) ^ 2 + OAI.QRHParameterAudit.discPoly y
+'OAI.QRHParameterAudit.square_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.polyA_pos {y : ℝ} (hy : 0 ≤ y) : 0 < OAI.QRHParameterAudit.polyA y
+'OAI.QRHParameterAudit.polyA_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.polyA_upper {y : ℝ} (hy0 : 0 ≤ y) (hy1 : y ≤ 1 / 2) : OAI.QRHParameterAudit.polyA y ≤ 108027216
+'OAI.QRHParameterAudit.polyA_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.discriminant_lower {y : ℝ} (hy : 0 ≤ y) : 128787346800 ≤ OAI.QRHParameterAudit.discPoly y
+'OAI.QRHParameterAudit.discriminant_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.endpoint_positive {d y : ℝ} (hy : 0 ≤ y) : 0 < OAI.QRHParameterAudit.endpointPoly d y
+'OAI.QRHParameterAudit.endpoint_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.endpoint_lower {d y : ℝ} (hy0 : 0 ≤ y) (hy1 : y ≤ 1 / 2) :
+  128787346800 ≤ 4 * 108027216 * OAI.QRHParameterAudit.endpointPoly d y
+'OAI.QRHParameterAudit.endpoint_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.high_margin {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  OAI.QRHParameterAudit.highE d x ≤ -OAI.QRHParameterAudit.gammaSave
+'OAI.QRHParameterAudit.high_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.highE_eq_generalE (d x : ℝ) :
+  OAI.QRHParameterAudit.highE d x =
+    OAI.QRHParameterAudit.generalE OAI.QRHParameterAudit.geomH d (x * d) (OAI.QRHParameterAudit.rowR d x)
+'OAI.QRHParameterAudit.highE_eq_generalE' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.floor_endpoint :
+  OAI.QRHParameterAudit.generalE OAI.QRHParameterAudit.geomH (1 / 50) (1 / 100) 1 = -105343 / 18750000
+'OAI.QRHParameterAudit.floor_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.floor_margin {r q : ℝ} (hr : r ≤ OAI.QRHParameterAudit.geomH) (hq : q ≤ 1 / 100) :
+  OAI.QRHParameterAudit.generalE r (1 / 50) q 1 ≤ -105343 / 18750000
+'OAI.QRHParameterAudit.floor_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.unselected_endpoint (d : ℝ) :
+  OAI.QRHParameterAudit.generalE (1 / 2) d (d / 2) (76 / 75 - 2 * d / 3) = -8263987 / 37500000 + 195407 / 750000 * d
+'OAI.QRHParameterAudit.unselected_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.unselected_margin {r d q : ℝ} (_hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hq : q ≤ d / 2) (hr : r ≤ 1 / 2) :
+  OAI.QRHParameterAudit.generalE r d q (76 / 75 - 2 * d / 3) ≤ -1872449 / 75000000
+'OAI.QRHParameterAudit.unselected_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.tiny_margin :
+  OAI.QRHParameterAudit.geomH * (17 / 50 - 1 / 6) - OAI.QRHParameterAudit.ly / 2 + 2 / 100 = -122913 / 1562500
+'OAI.QRHParameterAudit.tiny_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.extension_bounds :
+  0 < OAI.QRHParameterAudit.extension ∧
+    OAI.QRHParameterAudit.extension < OAI.QRHParameterAudit.gammaSave / 8 ∧
+      OAI.QRHParameterAudit.extension < 5 * OAI.QRHParameterAudit.ell - OAI.QRHParameterAudit.geomH ∧
+        1 / 5 < OAI.QRHParameterAudit.ell / (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) ∧
+          7 / 37 < 1 / 5
+'OAI.QRHParameterAudit.extension_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.selected_slope {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  0 < OAI.QRHParameterAudit.rowR d x + d / 2 - 17 / 50 ∧ OAI.QRHParameterAudit.rowR d x + d / 2 - 17 / 50 < 2
+'OAI.QRHParameterAudit.selected_slope' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.generalE_extension (z d q R : ℝ) :
+  OAI.QRHParameterAudit.generalE (OAI.QRHParameterAudit.geomH + z) d q R =
+    OAI.QRHParameterAudit.generalE OAI.QRHParameterAudit.geomH d q R + z * (R + d / 2 - 17 / 50)
+'OAI.QRHParameterAudit.generalE_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.extended_high_margin {d x : ℝ} (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) :
+  OAI.QRHParameterAudit.generalE (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) d (x * d)
+      (OAI.QRHParameterAudit.rowR d x) ≤
+    -(7 / 8) * OAI.QRHParameterAudit.gammaSave
+'OAI.QRHParameterAudit.extended_high_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.euler_exponents {s : ℝ} (hs : 3 / 4 ≤ s) :
+  149 / 100 ≤ OAI.QRHParameterAudit.eulerC s ∧ 1 < 149 / 100 ∧ 37 / 50 ≤ OAI.QRHParameterAudit.slotDecay s
+'OAI.QRHParameterAudit.euler_exponents' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_late_height {dmin tau0 m A : ℝ} (hd : 0 < dmin) (ht0 : 0 < tau0) (hm : 0 < m)
+  (hA : 0 ≤ A) : ∃ tau, 0 < tau ∧ tau ≤ dmin / 100 ∧ tau ≤ tau0 ∧ tau * A < m / 4
+'OAI.QRHParameterAudit.exists_late_height' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_late_tail {tau B target : ℝ} (ht : 0 < tau) : ∃ N, B - ↑N * tau < target
+'OAI.QRHParameterAudit.exists_late_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_common_losses {beta : ℝ} (hb : OAI.QRHParameterAudit.sigma0 < beta) :
+  ∃ omega margin,
+    0 < omega ∧
+      omega < beta - OAI.QRHParameterAudit.sigma0 ∧
+        0 < margin ∧ margin ≤ OAI.QRHParameterAudit.gammaSave / 2 ∧ margin ≤ (beta - OAI.QRHParameterAudit.sigma0) / 2
+'OAI.QRHParameterAudit.exists_common_losses' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_above_level {S : Set ℝ} (hne : S.Nonempty) (hbd : BddAbove S) {c : ℝ} (hc : c < sSup S) :
+  ∃ x ∈ S, c < x
+'OAI.QRHParameterAudit.exists_above_level' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_above_sentinel {S : Set ℝ} {sentinel c : ℝ} (hbd : BddAbove (insert sentinel S))
+  (hs : sentinel ≤ c) (hc : c < sSup (insert sentinel S)) : ∃ x ∈ S, c < x
+'OAI.QRHParameterAudit.exists_above_sentinel' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.arithmetic_parameter_certificate : OAI.QRHParameterAudit.ArithmeticParameterCertificate
+'OAI.QRHParameterAudit.arithmetic_parameter_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.polynomial_height_bound {Z tau A : ℝ} (hZ : 1 ≤ Z) (ht : 0 ≤ tau) (hA : 0 ≤ A) :
+  (1 + Z ^ tau) ^ A ≤ 2 ^ A * Z ^ (tau * A)
+'OAI.QRHParameterAudit.polynomial_height_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.absorb_height_and_tail {error : ℝ → ℂ} {target m A B dmin tau0 : ℝ} (hm : 0 < m) (hA : 0 ≤ A)
+  (hd : 0 < dmin) (ht0 : 0 < tau0)
+  (hbound :
+    ∀ (N : ℕ) (tau : ℝ),
+      0 < tau →
+        tau ≤ dmin / 100 →
+          tau ≤ tau0 →
+            ∃ C,
+              0 < C ∧
+                ∀ᶠ (Z : ℝ) in Filter.atTop,
+                  ‖error Z‖ ≤ C * (Z ^ (target - m) * (1 + Z ^ tau) ^ A + Z ^ (B - ↑N * tau))) :
+  ∃ C, 0 < C ∧ ∀ᶠ (Z : ℝ) in Filter.atTop, ‖error Z‖ ≤ C * Z ^ (target - m / 2)
+'OAI.QRHParameterAudit.absorb_height_and_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.absorbed_error_isBigO {error : ℝ → ℂ} {target m A B dmin tau0 : ℝ} (hm : 0 < m) (hA : 0 ≤ A)
+  (hd : 0 < dmin) (ht0 : 0 < tau0)
+  (hbound :
+    ∀ (N : ℕ) (tau : ℝ),
+      0 < tau →
+        tau ≤ dmin / 100 →
+          tau ≤ tau0 →
+            ∃ C,
+              0 < C ∧
+                ∀ᶠ (Z : ℝ) in Filter.atTop,
+                  ‖error Z‖ ≤ C * (Z ^ (target - m) * (1 + Z ^ tau) ^ A + Z ^ (B - ↑N * tau))) :
+  error =O[Filter.atTop] fun Z => Z ^ (target - m / 2)
+'OAI.QRHParameterAudit.absorbed_error_isBigO' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin_pos {boundary beta omega saving : ℝ}
+  (homega : omega < beta - boundary) (hsaving : 0 < saving) :
+  0 < OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega saving
+'OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin_pos' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.continuation_boundary_gt (boundary beta omega saving : ℝ)
+  (homega : 0 < omega) :
+  boundary < beta - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega saving
+'OAI.QRHParameterAudit.AnalyticContinuation.continuation_boundary_gt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.max_signal_exponents (boundary beta omega saving c : ℝ) :
+  max (boundary + c + omega) (beta + c - saving) =
+    beta + c - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega saving
+'OAI.QRHParameterAudit.AnalyticContinuation.max_signal_exponents' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.rpow_isBigO_atTop_of_le {a b : ℝ} (h : a ≤ b) :
+  (fun x => x ^ a) =O[Filter.atTop] fun x => x ^ b
+'OAI.QRHParameterAudit.AnalyticContinuation.rpow_isBigO_atTop_of_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound (J f : ℝ → ℂ) (a b : ℝ)
+  (hJ : J =O[Filter.atTop] fun x => x ^ a) (herror : (fun x => J x - f x) =O[Filter.atTop] fun x => x ^ b) :
+  f =O[Filter.atTop] fun x => x ^ max a b
+'OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound_with_margin (J f : ℝ → ℂ) (boundary β ω σ c : ℝ)
+  (hJ : J =O[Filter.atTop] fun x => x ^ (boundary + c + ω))
+  (herror : (fun x => J x - f x) =O[Filter.atTop] fun x => x ^ (β + c - σ)) :
+  f =O[Filter.atTop] fun x => x ^ (β + c - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary β ω σ)
+'OAI.QRHParameterAudit.AnalyticContinuation.common_signal_bound_with_margin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_convergent (f : ℝ → ℂ) (a c : ℝ)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (htop : f =O[Filter.atTop] fun x => x ^ (a + c))
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f) {s : ℂ} (hs : a < s.re) :
+  MellinConvergent f (-(s + ↑c))
+'OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_convergent' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_analytic (f : ℝ → ℂ) (a c : ℝ)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (htop : f =O[Filter.atTop] fun x => x ^ (a + c))
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f) :
+  AnalyticOnNhd ℂ (OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f c) {s | a < s.re}
+'OAI.QRHParameterAudit.AnalyticContinuation.signalMellin_analytic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.product_identity_on_halfPlane (a b : ℝ) (L M W : ℂ → ℂ)
+  (hL : AnalyticOnNhd ℂ L {s | a < s.re}) (hM : AnalyticOnNhd ℂ M {s | a < s.re})
+  (hW : AnalyticOnNhd ℂ W {s | a < s.re}) (heq : ∀ (s : ℂ), max a b < s.re → L s * M s = W s) :
+  Set.EqOn (fun s => L s * M s) W {s | a < s.re}
+'OAI.QRHParameterAudit.AnalyticContinuation.product_identity_on_halfPlane' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_regularized_signal (a b c : ℝ) (L Lregular R W : ℂ → ℂ)
+  (f : ℝ → ℂ) (hL : AnalyticOnNhd ℂ Lregular {s | a < s.re}) (hR : AnalyticOnNhd ℂ R {s | a < s.re})
+  (hW : AnalyticOnNhd ℂ W {s | a < s.re})
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (htop : f =O[Filter.atTop] fun x => x ^ (a + c))
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f)
+  (heq :
+    ∀ (s : ℂ), max a b < s.re → Lregular s * OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f c s = R s * W s)
+  {ρ : ℂ} (hρ : a < ρ.re) (hregular : Lregular ρ = R ρ * L ρ) (hRρ : R ρ ≠ 0) (hWρ : W ρ ≠ 0) : L ρ ≠ 0
+'OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_regularized_signal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.multiplier_ne_zero {H : ℂ → ℂ} {s : ℂ} (h : ‖H s - 1‖ ≤ 1 / 2) : H s ≠ 0
+'OAI.QRHParameterAudit.AnalyticContinuation.multiplier_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_analytic {H : ℂ → ℂ} {U : Set ℂ}
+  (hH : AnalyticOnNhd ℂ H U) : AnalyticOnNhd ℂ (OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H) U
+'OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_analytic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_ne_zero {H : ℂ → ℂ} {s : ℂ} (hH : ‖H s - 1‖ ≤ 1 / 2) :
+  OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H s ≠ 0
+'OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_common_signal (boundary β ω σ c : ℝ) (hω : 0 < ω)
+  (L Lregular R H : ℂ → ℂ) (J f : ℝ → ℂ)
+  (hL :
+    AnalyticOnNhd ℂ Lregular
+      {s | β - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary β ω σ < s.re})
+  (hR : AnalyticOnNhd ℂ R {s | β - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary β ω σ < s.re})
+  (hH : AnalyticOnNhd ℂ H {s | boundary < s.re}) (hcontract : ∀ (s : ℂ), boundary < s.re → ‖H s - 1‖ ≤ 1 / 2)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f)
+  (hJ : J =O[Filter.atTop] fun x => x ^ (boundary + c + ω))
+  (herror : (fun x => J x - f x) =O[Filter.atTop] fun x => x ^ (β + c - σ))
+  (heq :
+    ∀ (s : ℂ),
+      max (β - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary β ω σ) 1 < s.re →
+        Lregular s * OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f c s =
+          R s * OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H s)
+  {ρ : ℂ} (hρ : β - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary β ω σ < ρ.re)
+  (hregular : Lregular ρ = R ρ * L ρ) (hRρ : R ρ ≠ 0) : L ρ ≠ 0
+'OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_common_signal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_height_controlled_signal
+  (boundary beta omega m c A B dmin tau0 : ℝ) (homega : 0 < omega) (hm : 0 < m) (hA : 0 ≤ A) (hd : 0 < dmin)
+  (ht0 : 0 < tau0) (L Lregular R H : ℂ → ℂ) (J f : ℝ → ℂ)
+  (hL :
+    AnalyticOnNhd ℂ Lregular
+      {s | beta - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega (m / 2) < s.re})
+  (hR :
+    AnalyticOnNhd ℂ R
+      {s | beta - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega (m / 2) < s.re})
+  (hH : AnalyticOnNhd ℂ H {s | boundary < s.re}) (hcontract : ∀ (s : ℂ), boundary < s.re → ‖H s - 1‖ ≤ 1 / 2)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f)
+  (hJ : J =O[Filter.atTop] fun Z => Z ^ (boundary + c + omega))
+  (hhigh :
+    ∀ (N : ℕ) (tau : ℝ),
+      0 < tau →
+        tau ≤ dmin / 100 →
+          tau ≤ tau0 →
+            ∃ C,
+              0 < C ∧
+                ∀ᶠ (Z : ℝ) in Filter.atTop,
+                  ‖J Z - f Z‖ ≤ C * (Z ^ (beta + c - m) * (1 + Z ^ tau) ^ A + Z ^ (B - ↑N * tau)))
+  (heq :
+    ∀ (s : ℂ),
+      max (beta - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega (m / 2)) 1 < s.re →
+        Lregular s * OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f c s =
+          R s * OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H s)
+  {rho : ℂ}
+  (hrho : beta - OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin boundary beta omega (m / 2) < rho.re)
+  (hregular : Lregular rho = R rho * L rho) (hRrho : R rho ≠ 0) : L rho ≠ 0
+'OAI.QRHParameterAudit.AnalyticContinuation.nonzero_of_height_controlled_signal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_second_region_bound (Q : ℝ) (A eta v x w z : ℂ)
+  (hQ : 4 ≤ Q) (hA : ‖A‖ ≤ 1) (heta : ‖eta‖ ≤ 1) (hv : ‖v‖ ≤ 1) (hx : 3 / 4 ≤ x.re) (hw : 19 / 20 ≤ w.re)
+  (hz : 33 / 200 ≤ z.re) : ‖OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A eta v x w z - 1‖ ≤ 240 * Q ^ (-(149 / 100))
+'OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_second_region_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.extended_denominators (Q : ℝ) (A eta v x z : ℂ) (hQ : 4 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (he : ‖eta‖ ≤ 1) (hv : ‖v‖ ≤ 1) (hx : 3 / 4 ≤ x.re) (hz : 33 / 200 ≤ z.re) :
+  1 - OAI.SevenEighths.ProbeEuler.coordR Q A x z ≠ 0 ∧
+    1 - OAI.SevenEighths.ProbeEuler.coordV Q z ≠ 0 ∧ 1 - OAI.SevenEighths.ProbeEuler.coordD Q eta v x ≠ 0
+'OAI.QRHParameterAudit.EulerExtension.extended_denominators' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_analytic_x (Q : ℝ) (A eta v w z : ℂ) (hQ : 4 ≤ Q)
+  (hA : ‖A‖ ≤ 1) (he : ‖eta‖ ≤ 1) (hv : ‖v‖ ≤ 1) (hz : 33 / 200 ≤ z.re) :
+  AnalyticOnNhd ℂ (fun x => OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A eta v x w z) {x | 3 / 4 < x.re}
+'OAI.QRHParameterAudit.EulerExtension.unramifiedClosed_extended_analytic_x' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.principal_local_analytic (Q : ℝ) (A eta : ℂ) (hQ : 4 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (he : ‖eta‖ ≤ 1) :
+  AnalyticOnNhd ℂ (fun x => OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A eta 1 x 1 (1 / 6))
+    {x | OAI.QRHParameterAudit.sigma0 < x.re}
+'OAI.QRHParameterAudit.EulerExtension.principal_local_analytic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.extendedDefect_nonneg.{u_1} {ι : Type u_1} (Q : ι → ℝ) (i : ι) (hQ : 0 ≤ Q i) :
+  0 ≤ OAI.QRHParameterAudit.EulerExtension.extendedDefect Q i
+'OAI.QRHParameterAudit.EulerExtension.extendedDefect_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.extendedCorrection_analytic_and_close.{u_1} {ι : Type u_1} (Q : ι → ℝ)
+  (A eta v : ι → ℂ) (excluded : Finset ι) (hQ : ∀ (i : ι), 4 ≤ Q i) (hA : ∀ (i : ι), ‖A i‖ ≤ 1)
+  (he : ∀ (i : ι), ‖eta i‖ ≤ 1) (hv : ∀ (i : ι), ‖v i‖ ≤ 1)
+  (hsum : Summable fun i => OAI.QRHParameterAudit.EulerExtension.extendedDefect Q ↑i)
+  (hsmall : ∑' (i : { i // i ∉ excluded }), OAI.QRHParameterAudit.EulerExtension.extendedDefect Q ↑i ≤ 1 / 6) (w z : ℂ)
+  (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  AnalyticOnNhd ℂ (fun x => OAI.QRHParameterAudit.EulerExtension.extendedCorrection Q A eta v excluded x w z)
+      {x | 3 / 4 < x.re} ∧
+    ∀ (x : ℂ),
+      3 / 4 < x.re → ‖OAI.QRHParameterAudit.EulerExtension.extendedCorrection Q A eta v excluded x w z - 1‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.extendedCorrection_analytic_and_close' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.exists_uniform_extended_cutoff.{u_1} {ι : Type u_1} (Q : ι → ℝ)
+  (hQ : ∀ (i : ι), 4 ≤ Q i) (hsum : Summable (OAI.QRHParameterAudit.EulerExtension.extendedDefect Q)) :
+  ∃ excluded,
+    ∀ (A eta v : ι → ℂ),
+      (∀ (i : ι), ‖A i‖ ≤ 1) →
+        (∀ (i : ι), ‖eta i‖ ≤ 1) →
+          (∀ (i : ι), ‖v i‖ ≤ 1) →
+            ∀ (w z : ℂ),
+              19 / 20 ≤ w.re →
+                33 / 200 ≤ z.re →
+                  AnalyticOnNhd ℂ
+                      (fun x => OAI.QRHParameterAudit.EulerExtension.extendedCorrection Q A eta v excluded x w z)
+                      {x | 3 / 4 < x.re} ∧
+                    ∀ (x : ℂ),
+                      3 / 4 < x.re →
+                        ‖OAI.QRHParameterAudit.EulerExtension.extendedCorrection Q A eta v excluded x w z - 1‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.exists_uniform_extended_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_correction_defect {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ ≤ 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A η 1 s w z - 1‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.region_correction_defect' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_correction_lower_bound {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ ≤ 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  1 / 2 ≤ ‖OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A η 1 s w z‖
+'OAI.QRHParameterAudit.EulerExtension.region_correction_lower_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_correction_ne_zero {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ ≤ 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A η 1 s w z ≠ 0
+'OAI.QRHParameterAudit.EulerExtension.region_correction_ne_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_correction_inverse_bound {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q)
+  (hA : ‖A‖ ≤ 1) (hη : ‖η‖ ≤ 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖(OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A η 1 s w z)⁻¹‖ ≤ 2
+'OAI.QRHParameterAudit.EulerExtension.region_correction_inverse_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_geometric_bounds {Q : ℝ} {η s w z : ℂ} (hQ : 480 ≤ Q) (hη : ‖η‖ ≤ 1)
+  (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖OAI.SevenEighths.ProbeEuler.coordV Q z‖ ≤ 1 / 2 ∧
+    ‖OAI.SevenEighths.ProbeEuler.coordW Q 1 w‖ ≤ 1 / 2 ∧ ‖OAI.SevenEighths.ProbeEuler.coordD Q η 1 s‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.region_geometric_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_marked_error_bounds {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ = 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖OAI.SevenEighths.PrincipalSlotEstimate.regionMarked Q A η s w z + OAI.SevenEighths.ProbeEuler.coordD Q η 1 s‖ ≤
+      28 * Q ^ (-(37 / 50)) ∧
+    ‖star η * ↑Q ^ s‖ *
+        ‖OAI.SevenEighths.PrincipalSlotEstimate.regionMarked Q A η s w z + OAI.SevenEighths.ProbeEuler.coordD Q η 1 s‖ ≤
+      28 * Q ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.region_marked_error_bounds' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_replacement_error {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ = 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖OAI.SevenEighths.PrincipalSlotEstimate.regionReplacement Q A η s w z +
+        OAI.SevenEighths.ProbeEuler.unramifiedClosed Q A η 1 s w z‖ ≤
+    720 * Q ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.region_replacement_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.region_slot_error {Q : ℝ} {A η s w z : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (hη : ‖η‖ = 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  ‖OAI.SevenEighths.PrincipalSlotEstimate.regionSlot Q A η s w z + 1‖ ≤ 1440 * Q ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.region_slot_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.principal_slot_error_extended {Q : ℝ} {A eta s : ℂ} (hQ : 480 ≤ Q) (hA : ‖A‖ ≤ 1)
+  (he : ‖eta‖ = 1) (hs : 3 / 4 ≤ s.re) :
+  ‖OAI.SevenEighths.PrincipalSlotEstimate.principalSlot Q A eta s + 1‖ ≤ 1440 * Q ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.principal_slot_error_extended' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.ideal_norm_rpow_summable.{u_1} (K : Type u_1) [Field K] [NumberField K] (r : ℝ) (hr : 1 < r) :
+  Summable fun I => ↑(Ideal.absNorm I) ^ (-r)
+'OAI.QRHParameterAudit.ideal_norm_rpow_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.idealDefect_summable.{u_1} (K : Type u_1) [Field K] [NumberField K] :
+  Summable (OAI.QRHParameterAudit.EulerExtension.idealDefect K)
+'OAI.QRHParameterAudit.EulerExtension.idealDefect_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.idealDefect_nonneg.{u_1} (K : Type u_1) [Field K] [NumberField K]
+  (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K) : 0 ≤ OAI.QRHParameterAudit.EulerExtension.idealDefect K P
+'OAI.QRHParameterAudit.EulerExtension.idealDefect_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.exists_uniform_ideal_cutoff.{u_1} (K : Type u_1) [Field K] [NumberField K] :
+  ∃ N,
+    4 ≤ N ∧
+      ∀ (S : Finset (Ideal (NumberField.RingOfIntegers K))),
+        (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), Ideal.absNorm ↑P ≤ N → ↑P ∈ S) →
+          ∀ (A eta v : OAI.QRHParameterAudit.EulerExtension.NormPrime K → ℂ),
+            (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖A P‖ ≤ 1) →
+              (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖eta P‖ ≤ 1) →
+                (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖v P‖ ≤ 1) →
+                  ∀ (w z : ℂ),
+                    19 / 20 ≤ w.re →
+                      33 / 200 ≤ z.re →
+                        AnalyticOnNhd ℂ
+                            (fun x => OAI.QRHParameterAudit.EulerExtension.idealCorrection K A eta v S x w z)
+                            {x | 3 / 4 < x.re} ∧
+                          ∀ (x : ℂ),
+                            3 / 4 < x.re →
+                              ‖OAI.QRHParameterAudit.EulerExtension.idealCorrection K A eta v S x w z - 1‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.exists_uniform_ideal_cutoff' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.mem_idealSmallPrimeSet.{u_1} (K : Type u_1) [Field K] [NumberField K] (N : ℕ)
+  (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K) :
+  ↑P ∈ OAI.QRHParameterAudit.EulerExtension.idealSmallPrimeSet K N ↔ Ideal.absNorm ↑P ≤ N
+'OAI.QRHParameterAudit.EulerExtension.mem_idealSmallPrimeSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.exists_ideal_correction.{u_1} (K : Type u_1) [Field K] [NumberField K]
+  (S₀ : Finset (Ideal (NumberField.RingOfIntegers K))) :
+  ∃ S,
+    S₀ ⊆ S ∧
+      (∀ P ∈ S, Prime P ∨ P ∈ S₀) ∧
+        ∀ (A eta v : OAI.QRHParameterAudit.EulerExtension.NormPrime K → ℂ),
+          (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖A P‖ ≤ 1) →
+            (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖eta P‖ ≤ 1) →
+              (∀ (P : OAI.QRHParameterAudit.EulerExtension.NormPrime K), ‖v P‖ ≤ 1) →
+                ∀ (w z : ℂ),
+                  19 / 20 ≤ w.re →
+                    33 / 200 ≤ z.re →
+                      AnalyticOnNhd ℂ (fun x => OAI.QRHParameterAudit.EulerExtension.idealCorrection K A eta v S x w z)
+                          {x | 3 / 4 < x.re} ∧
+                        ∀ (x : ℂ),
+                          3 / 4 < x.re →
+                            ‖OAI.QRHParameterAudit.EulerExtension.idealCorrection K A eta v S x w z - 1‖ ≤ 1 / 2
+'OAI.QRHParameterAudit.EulerExtension.exists_ideal_correction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.weighted_region_slot_error.{u_1} {ι : Type u_1} (S : Finset ι) (weight Q : ι → ℝ)
+  (A eta : ι → ℂ) (s w z : ℂ) (P : ℝ) (hP : 480 ≤ P) (hweight : ∀ i ∈ S, 0 ≤ weight i) (hQ : ∀ i ∈ S, P ≤ Q i)
+  (hA : ∀ i ∈ S, ‖A i‖ ≤ 1) (he : ∀ i ∈ S, ‖eta i‖ = 1) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re)
+  (hz : 33 / 200 ≤ z.re) :
+  ‖∑ i ∈ S, ↑(weight i) * OAI.SevenEighths.PrincipalSlotEstimate.regionSlot (Q i) (A i) (eta i) s w z +
+        ↑(∑ i ∈ S, weight i)‖ ≤
+    1440 * P ^ (-(37 / 50)) * ∑ i ∈ S, weight i
+'OAI.QRHParameterAudit.EulerExtension.weighted_region_slot_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.weighted_region_product_error_linear.{u_1, u_2} {κ : Type u_1} {ι : Type u_2}
+  (S : Finset κ) (T : κ → Finset ι) (weight Q : κ → ι → ℝ) (A eta : κ → ι → ℂ) (s w z : ℂ) (P : ℝ) (hP : 480 ≤ P)
+  (hsmall : 1440 * P ^ (-(37 / 50)) ≤ 1) (hweight : ∀ j ∈ S, ∀ i ∈ T j, 0 ≤ weight j i)
+  (hQ : ∀ j ∈ S, ∀ i ∈ T j, P ≤ Q j i) (hA : ∀ j ∈ S, ∀ i ∈ T j, ‖A j i‖ ≤ 1) (he : ∀ j ∈ S, ∀ i ∈ T j, ‖eta j i‖ = 1)
+  (hM : ∀ j ∈ S, 0 < ∑ i ∈ T j, weight j i) (hs : 3 / 4 ≤ s.re) (hw : 19 / 20 ≤ w.re) (hz : 33 / 200 ≤ z.re) :
+  (OAI.SevenEighths.PrincipalSlotEstimate.principalScalar S fun j => ∑ i ∈ T j, weight j i) ≠ 0 ∧
+    ‖((∏ j ∈ S,
+              ∑ i ∈ T j,
+                ↑(weight j i) * OAI.SevenEighths.PrincipalSlotEstimate.regionSlot (Q j i) (A j i) (eta j i) s w z) /
+            OAI.SevenEighths.PrincipalSlotEstimate.principalScalar S fun j => ∑ i ∈ T j, weight j i) -
+          1‖ ≤
+      ↑S.card * 2 ^ S.card * 1440 * P ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.weighted_region_product_error_linear' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.EulerExtension.weighted_principal_product_error_extended.{u_1, u_2} {κ : Type u_1} {ι : Type u_2}
+  (S : Finset κ) (T : κ → Finset ι) (weight Q : κ → ι → ℝ) (A eta : κ → ι → ℂ) (s : ℂ) (P : ℝ) (hP : 480 ≤ P)
+  (hsmall : 1440 * P ^ (-(37 / 50)) ≤ 1) (hweight : ∀ j ∈ S, ∀ i ∈ T j, 0 ≤ weight j i)
+  (hQ : ∀ j ∈ S, ∀ i ∈ T j, P ≤ Q j i) (hA : ∀ j ∈ S, ∀ i ∈ T j, ‖A j i‖ ≤ 1) (he : ∀ j ∈ S, ∀ i ∈ T j, ‖eta j i‖ = 1)
+  (hM : ∀ j ∈ S, 0 < ∑ i ∈ T j, weight j i) (hs : 3 / 4 ≤ s.re) :
+  ‖((∏ j ∈ S,
+            ∑ i ∈ T j,
+              ↑(weight j i) * OAI.SevenEighths.PrincipalSlotEstimate.principalSlot (Q j i) (A j i) (eta j i) s) /
+          OAI.SevenEighths.PrincipalSlotEstimate.principalScalar S fun j => ∑ i ∈ T j, weight j i) -
+        1‖ ≤
+    ↑S.card * 2 ^ S.card * 1440 * P ^ (-(37 / 50))
+'OAI.QRHParameterAudit.EulerExtension.weighted_principal_product_error_extended' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.compensated_reflected_exponent_variable (total d ell₀ O₀ H A₀ N₀ S₀ B₀ za v ell el θ ε : ℝ)
+  (hd : 0 ≤ d) (hε : 0 ≤ ε) (hO : -ε ≤ O₀) (hH : H ≤ 1 - total - 2 * d - O₀ + ε) (hA : 2 * A₀ ≤ O₀ + ε) (hN : 0 ≤ N₀)
+  (hNA : N₀ ≤ A₀) (hS : 0 ≤ S₀) (hB : 0 ≤ B₀) (hell : ell₀ ≤ total - d + ε) (hz : za ≤ ell₀ + ε) (hv : -ε ≤ v)
+  (hl : -ε ≤ ell) (he : -ε ≤ el) (hθ : |θ| ≤ ε)
+  (hret : v + 3 * ell + el ≤ 2 * H + 2 * A₀ + 2 * za - 1 - ell₀ - θ - N₀ - 3 * B₀ + ε) :
+  OAI.SevenEighths.InverseTerminalWidths.reflectedExponent O₀ H S₀ B₀ za v ell el
+      (2 * H + 2 * A₀ + 2 * za - 1 - ell₀ - θ - N₀ - 3 * B₀) ≤
+    1 - total - 2 * d + max 0 (5 * total - 1 + d) / 4 + 40 * ε
+'OAI.QRHParameterAudit.compensated_reflected_exponent_variable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.compensated_reflected_cost (total d : ℝ) (htotal : total ≤ 1 / 5) (hd : 0 ≤ d) :
+  -d + max 0 (5 * total - 1 + d) / 8 ≤ -(7 / 8) * d
+'OAI.QRHParameterAudit.compensated_reflected_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.candidate_compensated_reflected_cost (d : ℝ) (hd : 0 ≤ d) :
+  -d + max 0 (5 * OAI.QRHParameterAudit.ell - 1 + d) / 8 ≤ -(7 / 8) * d
+'OAI.QRHParameterAudit.candidate_compensated_reflected_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_inverse_power_cancel_variable (Z M d α : ℝ) (hZ : 0 < Z) :
+  Z ^ (M - 2 * d + α) * (Z ^ d) ^ 2 / Z ^ M = Z ^ α
+'OAI.QRHParameterAudit.low_inverse_power_cancel_variable' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_inverse_sqrt_normalized_variable (q C B Z L M d α H E : ℝ) (n : ℕ) (hq : 0 < q) (hC : 0 ≤ C)
+  (_hB : 0 ≤ B) (hZ : 0 < Z) (hL : 0 < L) (hH : 1 ≤ H) (hE : 0 ≤ E) (hEL : E ≤ C * H ^ n * Z ^ (M - 2 * d + α))
+  (hLB : L ≤ B * Z ^ d) : √E / √(q * Z ^ M / L ^ 2) ≤ √(C * B ^ 2 / q) * H ^ n * Z ^ (α / 2)
+'OAI.QRHParameterAudit.low_inverse_sqrt_normalized_variable' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_compensated_sqrt_bound (q C B Z L total d α H E : ℝ) (n : ℕ) (hq : 0 < q) (hC : 0 ≤ C)
+  (hB : 0 ≤ B) (hZ : 1 ≤ Z) (hL : 0 < L) (hH : 1 ≤ H) (htotal : total ≤ 1 / 5) (hd : 0 ≤ d) (hE : 0 ≤ E)
+  (hEL : E ≤ C * H ^ n * Z ^ (1 - total - 2 * d + max 0 (5 * total - 1 + d) / 4 + α)) (hLB : L ≤ B * Z ^ d) :
+  Z ^ (-d) * (√E / √(q * Z ^ (1 - total) / L ^ 2)) ≤ √(C * B ^ 2 / q) * H ^ n * Z ^ (α / 2 - 7 / 8 * d)
+'OAI.QRHParameterAudit.low_compensated_sqrt_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_gram_sqrt_power_variable (Z x y δ : ℝ) (hZ : 0 < Z) :
+  √(Z ^ x * (Z ^ (y - x)) ^ (1 / 6) * (Z ^ y) ^ δ) = Z ^ (x / 2 + (y - x) / 12 + y * δ / 2)
+'OAI.QRHParameterAudit.low_gram_sqrt_power_variable' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.low_gram_sqrt_power_candidate (Z δ : ℝ) (hZ : 0 < Z) :
+  √(Z ^ OAI.QRHParameterAudit.lx * (Z ^ (OAI.QRHParameterAudit.ly - OAI.QRHParameterAudit.lx)) ^ (1 / 6) *
+        (Z ^ OAI.QRHParameterAudit.ly) ^ δ) =
+    Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 + OAI.QRHParameterAudit.ly * δ / 2)
+'OAI.QRHParameterAudit.low_gram_sqrt_power_candidate' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowD_eq_existing (x : ℝ) :
+  OAI.QRHParameterAudit.rowD x = OAI.SevenEighths.Endpoint.denominator (1 / 2 - x)
+'OAI.QRHParameterAudit.rowD_eq_existing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowP_eq_existing (x : ℝ) :
+  OAI.QRHParameterAudit.rowP x = OAI.SevenEighths.Endpoint.primeWeight (1 / 2 - x)
+'OAI.QRHParameterAudit.rowP_eq_existing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowJ_eq_existing (d x : ℝ) :
+  OAI.QRHParameterAudit.rowJ d x = OAI.SevenEighths.Endpoint.balanceDenominator d (1 / 2 - x)
+'OAI.QRHParameterAudit.rowJ_eq_existing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.witnessT_eq_existing (d x : ℝ) :
+  OAI.QRHParameterAudit.witnessT d x = OAI.SevenEighths.Endpoint.balancedCutoff d (1 / 2 - x)
+'OAI.QRHParameterAudit.witnessT_eq_existing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.rowR_eq_existing (d x : ℝ) :
+  OAI.QRHParameterAudit.rowR d x = OAI.SevenEighths.Endpoint.balancedRowCount d (1 / 2 - x)
+'OAI.QRHParameterAudit.rowR_eq_existing' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.fixed_capacity_of_baseline {beta : ℝ} (hbeta : beta ≤ 7 / 8) : 2 * beta - 1 ≤ 3 / 4
+'OAI.QRHParameterAudit.fixed_capacity_of_baseline' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.fixed_capacity_identity (m width : ℝ) :
+  2 * m + 6 * (3 / 4 + 2 * 0) * width = 2 * m + 9 / 2 * width
+'OAI.QRHParameterAudit.fixed_capacity_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.selected_row_margin {r d x : ℝ}
+  (hr : r ≤ OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4) (hx0 : 0 ≤ x)
+  (hx1 : x ≤ 1 / 2) :
+  OAI.QRHParameterAudit.generalE r d (x * d) (OAI.QRHParameterAudit.rowR d x) ≤
+    -(7 / 8) * OAI.QRHParameterAudit.gammaSave
+'OAI.QRHParameterAudit.selected_row_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.selected_row_sum_bound.{u_1} {ι : Type u_1} (rows : Finset ι) (term : ι → ℂ)
+  {Z r d x Ccount Cterm countLoss termLoss : ℝ} (hZ : 1 ≤ Z) (_hr0 : 0 ≤ r)
+  (hr1 : r ≤ OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) (hd0 : 0 ≤ d) (hd1 : d ≤ 3 / 4)
+  (hx0 : 0 ≤ x) (hx1 : x ≤ 1 / 2) (hCc : 0 ≤ Ccount) (hCt : 0 ≤ Cterm) (hcountLoss : 0 ≤ countLoss)
+  (hbudget :
+    (OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) * countLoss + termLoss ≤
+      3 / 8 * OAI.QRHParameterAudit.gammaSave)
+  (hcard : ↑rows.card ≤ Ccount * Z ^ (r * (OAI.QRHParameterAudit.rowR d x + countLoss)))
+  (hterm :
+    ∀ u ∈ rows,
+      ‖term u‖ ≤
+        Cterm *
+          Z ^
+            (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 + OAI.QRHParameterAudit.generalE r d (x * d) 0 +
+              termLoss)) :
+  ‖∑ u ∈ rows, term u‖ ≤
+    Ccount * Cterm *
+      Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 - OAI.QRHParameterAudit.gammaSave / 2)
+'OAI.QRHParameterAudit.selected_row_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.selected_bins_sum_bound.{u_1} {ι : Type u_1} (bins : Finset ι) (term : ι → ℂ) {Z C : ℝ}
+  (hterm :
+    ∀ i ∈ bins,
+      ‖term i‖ ≤
+        C * Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 - OAI.QRHParameterAudit.gammaSave / 2)) :
+  ‖∑ i ∈ bins, term i‖ ≤
+    ↑bins.card * C *
+      Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 - OAI.QRHParameterAudit.gammaSave / 2)
+'OAI.QRHParameterAudit.selected_bins_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.baselineBoundary_improves {saving : ℝ} (hsaving : 0 < saving) :
+  OAI.QRHParameterAudit.sigma0 < OAI.QRHParameterAudit.baselineBoundary saving ∧
+    OAI.QRHParameterAudit.baselineBoundary saving < 7 / 8
+'OAI.QRHParameterAudit.baselineBoundary_improves' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.baselineBoundary_eq (saving : ℝ) :
+  OAI.QRHParameterAudit.baselineBoundary saving =
+    7 / 8 -
+      OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin OAI.QRHParameterAudit.sigma0 (7 / 8)
+        OAI.QRHParameterAudit.baselineLoss (saving / 2)
+'OAI.QRHParameterAudit.baselineBoundary_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.firstBoundary_improves :
+  OAI.QRHParameterAudit.sigma0 < OAI.QRHParameterAudit.firstBoundary ∧
+    OAI.QRHParameterAudit.firstBoundary < 7 / 8 ∧ 7 / 8 - OAI.QRHParameterAudit.firstBoundary = 1 / 4000000
+'OAI.QRHParameterAudit.firstBoundary_improves' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.baseline_margin_eq :
+  OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin OAI.QRHParameterAudit.sigma0 (7 / 8)
+      OAI.QRHParameterAudit.baselineLoss (OAI.QRHParameterAudit.gammaSave / 2) =
+    OAI.QRHParameterAudit.gammaSave / 2
+'OAI.QRHParameterAudit.baseline_margin_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.baseline_continuation_below_firstBoundary :
+  7 / 8 -
+      OAI.QRHParameterAudit.AnalyticContinuation.continuationMargin OAI.QRHParameterAudit.sigma0 (7 / 8)
+        OAI.QRHParameterAudit.baselineLoss (OAI.QRHParameterAudit.gammaSave / 2) <
+    OAI.QRHParameterAudit.firstBoundary
+'OAI.QRHParameterAudit.baseline_continuation_below_firstBoundary' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.QRHParameterAudit.nonzero_of_fixed_baseline_bounds (saving A B dmin tau0 : ℝ) (hsaving : 0 < saving) (hA : 0 ≤ A)
+  (hd : 0 < dmin) (ht0 : 0 < tau0) (L Lregular R H : ℂ → ℂ) (J f : ℝ → ℂ)
+  (hL : AnalyticOnNhd ℂ Lregular {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hR : AnalyticOnNhd ℂ R {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hH : AnalyticOnNhd ℂ H {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hcontract : ∀ (s : ℂ), OAI.QRHParameterAudit.sigma0 < s.re → ‖H s - 1‖ ≤ 1 / 2)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f)
+  (hJ :
+    J =O[Filter.atTop] fun Z =>
+      Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 + OAI.QRHParameterAudit.baselineLoss))
+  (hhigh :
+    ∀ (N : ℕ) (tau : ℝ),
+      0 < tau →
+        tau ≤ dmin / 100 →
+          tau ≤ tau0 →
+            ∃ C,
+              0 < C ∧
+                ∀ᶠ (Z : ℝ) in Filter.atTop,
+                  ‖J Z - f Z‖ ≤
+                    C * (Z ^ (OAI.QRHParameterAudit.signal (7 / 8) - saving) * (1 + Z ^ tau) ^ A + Z ^ (B - ↑N * tau)))
+  (heq :
+    ∀ (s : ℂ),
+      1 < s.re →
+        Lregular s * OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f (-11 / 16) s =
+          R s * OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H s)
+  {rho : ℂ} (hrho : OAI.QRHParameterAudit.baselineBoundary saving < rho.re) (hregular : Lregular rho = R rho * L rho)
+  (hRrho : R rho ≠ 0) : L rho ≠ 0
+'OAI.QRHParameterAudit.nonzero_of_fixed_baseline_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.nonzero_of_fixed_baseline_error (saving : ℝ) (hsaving : 0 < saving) (L Lregular R H : ℂ → ℂ)
+  (J f : ℝ → ℂ) (hL : AnalyticOnNhd ℂ Lregular {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hR : AnalyticOnNhd ℂ R {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hH : AnalyticOnNhd ℂ H {s | OAI.QRHParameterAudit.sigma0 < s.re})
+  (hcontract : ∀ (s : ℂ), OAI.QRHParameterAudit.sigma0 < s.re → ‖H s - 1‖ ≤ 1 / 2)
+  (hlocal : MeasureTheory.LocallyIntegrableOn f (Set.Ioi 0) MeasureTheory.volume)
+  (hzero : OAI.QRHParameterAudit.AnalyticContinuation.RapidDecayAtZero f)
+  (hJ :
+    J =O[Filter.atTop] fun Z =>
+      Z ^ (OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 + OAI.QRHParameterAudit.baselineLoss))
+  (herror : (fun Z => J Z - f Z) =O[Filter.atTop] fun Z => Z ^ (OAI.QRHParameterAudit.signal (7 / 8) - saving / 2))
+  (heq :
+    ∀ (s : ℂ),
+      1 < s.re →
+        Lregular s * OAI.QRHParameterAudit.AnalyticContinuation.signalMellin f (-11 / 16) s =
+          R s * OAI.QRHParameterAudit.AnalyticContinuation.gaussianMultiplier H s)
+  {rho : ℂ} (hrho : OAI.QRHParameterAudit.baselineBoundary saving < rho.re) (hregular : Lregular rho = R rho * L rho)
+  (hRrho : R rho ≠ 0) : L rho ≠ 0
+'OAI.QRHParameterAudit.nonzero_of_fixed_baseline_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_distinct_slots (total L : ℝ) (htotal : 0 < total) (hL : 0 < L) :
+  ∃ N, 0 < N ∧ ∃ d, Function.Injective d ∧ (∀ (j : Fin N), 0 < d j ∧ d j < L) ∧ ∑ j, d j = total
+'OAI.QRHParameterAudit.exists_distinct_slots' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_physical_slots (total dmin dmax mesh R : ℝ) (htotal : 0 < total) (hdmin : 0 < dmin)
+  (hd : dmin ≤ dmax) (hm : 0 < mesh) (hR : 0 < R) :
+  ∃ N,
+    0 < N ∧
+      ∃ d rmin,
+        0 < rmin ∧
+          Function.Injective d ∧
+            ∑ j, d j = total ∧
+              (∀ (j : Fin N), 0 < d j ∧ dmax * rmin ≤ d j ∧ d j ≤ dmin * mesh ∧ d j ≤ dmin * R) ∧
+                ∀ (u : ℝ), dmin ≤ u → u ≤ dmax → ∀ (j : Fin N), rmin ≤ d j / u ∧ d j / u ≤ mesh ∧ d j / u ≤ R
+'OAI.QRHParameterAudit.exists_physical_slots' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.exists_audit_slots (mesh R : ℝ) (hm : 0 < mesh) (hR : 0 < R) :
+  ∃ N,
+    0 < N ∧
+      ∃ d rmin,
+        0 < rmin ∧
+          Function.Injective d ∧
+            ∑ j, d j = OAI.QRHParameterAudit.ell ∧
+              (∀ (j : Fin N), 0 < d j ∧ 7 / 8 * rmin ≤ d j ∧ d j ≤ 1 / 100 * mesh ∧ d j ≤ 1 / 100 * R) ∧
+                ∀ (u : ℝ), 1 / 100 ≤ u → u ≤ 7 / 8 → ∀ (j : Fin N), rmin ≤ d j / u ∧ d j / u ≤ mesh ∧ d j / u ≤ R
+'OAI.QRHParameterAudit.exists_audit_slots' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.central_physical_scale_identity {Z : ℝ} (hZ : 0 < Z) (a e : ℝ) :
+  (Z ^ OAI.QRHParameterAudit.lx) ^ (4 / 25) * Z ^ (a + 16 * e - 33 / 50) *
+      (Z ^ OAI.QRHParameterAudit.ly) ^ (-a - 6 * e) =
+    Z ^ OAI.QRHParameterAudit.centralPhysicalScale a e
+'OAI.QRHParameterAudit.central_physical_scale_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.central_class_exponent_identity (N : ℕ) (a v d R q L e eps loss mesh overhead : ℝ) :
+  OAI.QRHParameterAudit.centralPhysicalScale a e + overhead + d * (R + L) +
+          v * (a - 1 / 2 + 12 * e + eps * (↑N + 8) - 17 / 50) +
+        loss +
+      OAI.QRHParameterAudit.ell * (-4 / 25 + q + mesh) =
+    OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 + OAI.QRHParameterAudit.generalE v (2 * a - 1) q R +
+                  (d - v) * R +
+                d * L +
+              (16 - 6 * OAI.QRHParameterAudit.ly) * e +
+            v * (12 * e + (↑N + 8) * eps) +
+          loss +
+        OAI.QRHParameterAudit.ell * mesh +
+      overhead
+'OAI.QRHParameterAudit.central_class_exponent_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.QRHParameterAudit.central_class_saving (N : ℕ) (a v d q L μ e eps loss mesh overhead saving : ℝ) (ha : 1 / 2 < a)
+  (ha' : a ≤ 7 / 8) (hq : 0 ≤ q) (hq' : q ≤ (2 * a - 1) / 2)
+  (hv : v ≤ OAI.QRHParameterAudit.geomH + OAI.QRHParameterAudit.extension) (hd : d ≤ 1) (hdv : d - v ≤ μ) (hL : 0 ≤ L)
+  (hμ : 0 ≤ μ) (he : 0 ≤ e) (heps : 0 ≤ eps)
+  (hbudget :
+    L + 3 / 2 * μ + 28 * e + (↑N + 8) * eps + loss + OAI.QRHParameterAudit.ell * mesh + overhead + saving ≤
+      7 / 8 * OAI.QRHParameterAudit.gammaSave) :
+  OAI.QRHParameterAudit.centralPhysicalScale a e + overhead +
+            d * (OAI.SevenEighths.Endpoint.balancedRowCount (2 * a - 1) (1 / 2 - q / (2 * a - 1)) + L) +
+          v * (a - 1 / 2 + 12 * e + eps * (↑N + 8) - 17 / 50) +
+        loss +
+      OAI.QRHParameterAudit.ell * (-4 / 25 + q + mesh) ≤
+    OAI.QRHParameterAudit.signal OAI.QRHParameterAudit.sigma0 - saving
+'OAI.QRHParameterAudit.central_class_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+OAI.SevenEighths.ProbeHighRowFamily.audited_floor_source_margin {v ζ : ℝ} (hζ : 0 ≤ ζ)
+  (hv : v ≤ OAI.QRHParameterAudit.geomH + ζ) :
+  OAI.SevenEighths.ProbeHighRowFamily.auditedFloorExponent v ≤ 3 / 16 - 1 / 200 + 2 * ζ
+'OAI.SevenEighths.ProbeHighRowFamily.audited_floor_source_margin' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.SevenEighths.ProbeHighRowFamily.audited_floor_loss_bound (N : ℕ) {v e eps loss mesh : ℝ} (hv : v ≤ 1) (he : 0 ≤ e)
+  (heps : 0 ≤ eps) :
+  OAI.SevenEighths.ProbeHighRowFamily.auditedFloorLoss N v e eps loss mesh ≤
+    28 * e + (↑N + 8) * eps + loss + OAI.QRHParameterAudit.ell * mesh
+'OAI.SevenEighths.ProbeHighRowFamily.audited_floor_loss_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+OAI.SevenEighths.ProbeHighRowFamily.audited_floor_exponent_identity (N : ℕ) (v e eps loss mesh : ℝ) :
+  OAI.QRHParameterAudit.centralPhysicalScale (51 / 100) e +
+      (v * (67 / 100 + 12 * e + eps * (↑N + 8)) + loss + OAI.QRHParameterAudit.ell * (-3 / 20 + mesh)) =
+    OAI.SevenEighths.ProbeHighRowFamily.auditedFloorExponent v +
+      OAI.SevenEighths.ProbeHighRowFamily.auditedFloorLoss N v e eps loss mesh
+'OAI.SevenEighths.ProbeHighRowFamily.audited_floor_exponent_identity' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+PASS QRHParameterAudit.TrustReport (95.8s)
+PASS: every selected module compiled; only foundational axioms in the requested axiom report.

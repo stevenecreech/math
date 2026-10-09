@@ -1,2 +1,0 @@
-import OAI.AlgebraicGeometry.CharacterVarieties.Frames.PositiveCoordinates
-import OAI.AlgebraicGeometry.CharacterVarieties.Frames.MirrorSeams

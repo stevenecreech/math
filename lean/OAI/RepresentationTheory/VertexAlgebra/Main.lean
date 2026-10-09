@@ -1,3 +1,0 @@
-import OAI.RepresentationTheory.VertexAlgebra.MainClauseOne
-import OAI.RepresentationTheory.VertexAlgebra.ModuleCreationRangeReduction
-import OAI.RepresentationTheory.VertexAlgebra.SourceModuleEnergy

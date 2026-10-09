@@ -1,2 +1,0 @@
-# Optional only: rigorous certificate scripts use the Python standard library.
-mpmath==1.3.0

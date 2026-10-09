@@ -1,0 +1,11 @@
+Lean toolchain: leanprover/lean4:v4.34.1
+mathlib commit: d13f23b723b8a846827a245b89c10fc7d3f11612
+Source manuscript SHA-256: 8fe93046f8cf5ef1ba5969c89addc02d76311adc4ee907509ff9cd96f7ec99e7
+Parameter audit SHA-256: 64c14056fbd322e226731b68e160f8f6cd874cfa9a440e6687781132103db12d
+All 9 cached package revisions match the lockfile.
+Scope: unconditional parameter arithmetic and partial analytic generalizations (continuation, height absorption, Euler products and slots).
+No improved L-function nonvanishing theorem is asserted by this check.
+Compilation selection (1 modules): QRHParameterAudit.BaselineImprovement
+CHECK QRHParameterAudit.BaselineImprovement
+PASS QRHParameterAudit.BaselineImprovement (53.4s)
+PASS: every selected module compiled; only foundational axioms in the requested axiom report.

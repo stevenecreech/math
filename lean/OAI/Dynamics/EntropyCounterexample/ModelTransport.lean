@@ -1,4 +1,0 @@
-import OAI.Dynamics.EntropyCounterexample.Conjugacy
-import OAI.Geometry.SingularHomology.HomologyConjugacy
-import OAI.Dynamics.EntropyCounterexample.C1Conjugacy
-import OAI.Dynamics.EntropyCounterexample.EntropySection

@@ -1,2 +1,0 @@
-import OAI.Dynamics.EntropyCounterexample.SphereCutoffBounds
-import OAI.Dynamics.EntropyCounterexample.SphereAngularTransport

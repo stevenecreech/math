@@ -1,4 +1,4 @@
-import OAI.NumberTheory.DirichletL.Detector.EulerCoordinates
+import OAI.NumberTheory.DirichletL.Detector.EulerCoordinatesScalar
 
 namespace OAI
 

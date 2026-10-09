@@ -1,4 +1,6 @@
-import OAI.NumberTheory.DirichletL.Inversion.TerminalWidths
+import OAI.NumberTheory.DirichletL.Inversion.TerminalExponent
+import Mathlib.Tactic.Linarith
+import Mathlib.Tactic.Ring
 
 namespace OAI
 

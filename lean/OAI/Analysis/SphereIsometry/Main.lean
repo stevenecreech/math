@@ -1,4 +1,0 @@
-import OAI.Analysis.SphereIsometry.Extension
-import OAI.Analysis.SphereIsometry.BarycentricPurity
-import OAI.Analysis.SphereIsometry.IteratedSubdivision
-import OAI.Analysis.SphereIsometry.SubdivisionPointRestriction
